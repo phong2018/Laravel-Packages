@@ -1,0 +1,41 @@
+{
+    "name": "phonglg/laravelreact",
+    "description": "",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "author name",
+            "email": "author email",
+            "homepage": "author homepage"
+        }
+    ],
+    "homepage": "https://github.com/phonglg/laravelreact",
+    "keywords": ["Laravel", "LaravelReact"],
+    "require": {
+        "illuminate/support": "~7|~8"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~9.0",
+        "orchestra/testbench": "~5|~6"
+    },
+    "autoload": {
+        "psr-4": {
+            "Phonglg\\LaravelReact\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Phonglg\\LaravelReact\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Phonglg\\LaravelReact\\LaravelReactServiceProvider"
+            ],
+            "aliases": {
+                "LaravelReact": "Phonglg\\LaravelReact\\Facades\\LaravelReact"
+            }
+        }
+    }
+}

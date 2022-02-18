@@ -1,0 +1,137 @@
+#b-basic-feature-1 {
+  padding: 47px 0;
+
+  .c-background {
+    &__image {
+      background: #f5f5f5;
+    }
+  }
+
+  .col-text {
+    padding: 41px 0;
+    width: 465px;
+    @include homemobile { 
+      padding: 0 16px 41px;
+    }
+
+    .c-text:first-child {
+      @include format-sizeline(fontsize(l),47px);
+      @include homemobile {
+        @include format-sizeline(fontsize(lb),39px);
+      }
+      color: font-color(primary);
+      font-family: fontfamily(secondary);
+      width: 342px;
+      
+    }
+
+    .c-text:nth-child(2) {
+      @include homedesktop {
+        width: 465px;
+      }
+      color: font-color(secondary);
+      line-height: 19px;
+      margin-top: 25px;
+    }
+
+    .c-button-collection {
+      &__item {
+        @include format-link(font-color(fifth));
+        line-height: 19px;
+        list-style: none;
+        margin-top: 20px;
+      }
+    }
+
+  }
+
+  .col-picture {
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
+
+    .c-picture {
+      width: 463px;
+      @include homedesktop {
+        position: absolute;
+        right: 0;
+      }
+    }
+
+    img {
+      border-radius: 8px;
+      @include homedesktop {
+        width: 100%;
+      }
+    }
+  }
+}
+/*3----------*/
+
+#b-basic-feature-2 {
+  padding: 47px 0;
+
+  .row {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .c-background {
+    &__image {
+      background: linear-gradient(135deg, #0ff 0%, #6455ff 100%);
+    }
+  }
+
+  .col-text {
+    padding: 45px 0 41px 35px;
+    width: 465px;
+    @include homemobile { 
+      padding: 0 16px 41px;
+    }
+
+    .c-text:first-child {
+      @include format-sizeline(fontsize(l),47px);
+      @include homemobile {
+        @include format-sizeline(fontsize(lb),39px);
+      }
+      color: font-color(third);
+      font-family: fontfamily(secondary);
+      width: 342px;
+    }
+
+    .c-text:nth-child(2) {
+      @include homedesktop {
+        width: 465px;
+      }
+      color: font-color(third);
+      line-height: 19px;
+      margin-top: 30px;
+    }
+
+    .c-button-collection {
+      &__item {
+        @include format-link(font-color(third));
+        line-height: 19px;
+        list-style: none;
+        margin-top: 20px; 
+      }
+    }
+
+  }
+
+  .col-picture {
+    .c-picture {
+      filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
+      @include homedesktop {
+        left: 0;
+        position: absolute;
+      }
+      width: 463px;
+    }
+
+    img {
+      border-radius: 8px;
+      @include homedesktop {
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+    "name": "phonglg/laravelveso",
+    "description": "",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Author Name",
+            "email": "author@email.com",
+            "homepage": "http://author.com"
+        }
+    ],
+    "homepage": "https://github.com/phonglg/laravelveso",
+    "keywords": ["Laravel", "LaravelVeso"],
+    "require": {
+        "illuminate/support": "~7|~8"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~9.0",
+        "orchestra/testbench": "~5|~6"
+    },
+    "autoload": {
+        "psr-4": {
+            "Phonglg\\LaravelVeso\\": "src/",
+            "Phonglg\\LaravelVeso\\Tests\\": "tests"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Phonglg\\LaravelVeso\\Tests\\": "tests"
+        }
+    }, 
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Phonglg\\LaravelVeso\\LaravelVesoServiceProvider"
+            ],
+            "aliases": {
+                "LaravelVeso": "Phonglg\\LaravelVeso\\Facades\\LaravelVeso"
+            }
+        }
+    }
+}

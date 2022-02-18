@@ -1,0 +1,105 @@
+$widthcontainer: 1000px;
+$widthmobile: 576px;
+
+@mixin format-sizeline($fontsize:'',$lineheight:'') {
+  @if $fontsize != '' {font-size: $fontsize;}
+  @if $lineheight != '' {line-height: $lineheight;}
+}
+
+@mixin format-leftop($left:'',$top:'') {
+  @if $left != '' {left: $left;}
+  @if $top != '' {top: $top;}
+}
+
+@mixin transitonimg {
+  img {
+    transition: transform 0.25s, visibility 0.25s ease-in;
+  }
+
+  &:hover img {
+    transform: scale(1.5);
+  }
+}
+
+@mixin homemobile {
+  @media (max-width: #{$widthmobile}) {
+    @content;
+  }
+}
+
+@mixin homedesktop {
+  @media (min-width: #{$widthmobile}) {
+    @content;
+  }
+}
+
+@mixin format-button($colorbg:'',$colortext:'') {
+  @include homemobile { 
+    a {
+      color: $colortext;
+      font-size: fontsize(m);
+      font-weight: bold;
+    }
+    height: 42px;
+    padding: 12px;
+    width: 161px;
+  }
+  background: $colorbg;
+  border-radius: 2px;
+  font-family: fontfamily(secondary);
+  height: 36px;
+  list-style: none;
+  padding: 9px;
+  text-transform: uppercase;
+  width: 138px;
+
+  a {
+    color: $colortext;
+  }
+}
+
+@mixin format-link($colortext:'') {
+  @include homemobile {
+    a { 
+      font-size: fontsize(m);
+    }
+  }
+  font-family: fontfamily(secondary);
+  font-weight: bold;
+  list-style: none;
+  padding: 9px 9px 9px 0;
+  text-decoration: underline;
+  text-transform: uppercase;
+
+  a {
+    color: $colortext;
+  }
+}
+
+.container {
+  width: 1000px; 
+}
+
+@include homemobile {
+  .container {
+    width: 100%;
+  }
+
+  .col-6 {
+    flex: 100%;
+    max-width: 100%;
+    width: 100%;
+  } 
+}
+
+body {
+  font-family: fontfamily(primary);
+  font-size: fontsize(s);
+}
+
+/*1----------*/
+@import './home/home-hero';
+/*2----------*/
+@import './home/home-basic-feature';
+/*----------*/
+@import './home/home_card-list';

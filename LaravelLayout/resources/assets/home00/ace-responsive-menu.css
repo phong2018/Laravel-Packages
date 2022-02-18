@@ -1,0 +1,389 @@
+/* 
+Ace Responsive Menu Plugin
+Version: 1.0
+Author: Samson Onna
+E-mail: samson3d@gmail.com
+Website: www.webthemez.com
+----------------------------------------*/
+/* Import Fonts
+----------------------------------------*/
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+
+/* Ace Responsive Menu
+----------------------------------------*/
+a {
+    text-shadow: none;
+    color: #0d638f;
+}
+ul {
+    margin: 0px;
+    padding: 0px;
+}
+.ace-responsive-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background: #d21213;
+    float:left;
+    width:100%;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 5px;
+    /* border-bottom: 3px solid #FD5025; */
+}
+.ace-responsive-menu li{
+    list-style: none;
+}
+.ace-responsive-menu li ul {
+    display:none;
+}
+.ace-responsive-menu > li {
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: 0px;
+    float: left;
+}
+.ace-responsive-menu li a {
+        color:white;
+}
+.ace-responsive-menu > li > a {
+    display: block;
+    position: relative;
+    margin: 0;
+    border: 0px;
+    padding: 7px 10px 7px 10px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 300;
+    color: white;
+}
+.ace-responsive-menu li a i {
+    padding-right: 5px;
+    color: #d0d0d0;
+}
+.ace-responsive-menu > li > a i {
+    font-size: 14px;
+    text-shadow: none;
+    color: white;
+}
+.ace-responsive-menu li ul.sub-menu li a i {
+    padding-right: 10px;
+}
+.ace-responsive-menu li.menu-active > a {
+    background: #d21213;
+    color: white;
+}
+.ace-responsive-menu li .menu-active {
+    position: relative;
+}
+.ace-responsive-menu > li > a > .arrow:before {  
+    margin-left: 15px;
+    display: inline;
+    font-size: 14px;
+    font-family: FontAwesome;
+    height: auto;
+    content: " \276F";
+    font-weight: 300;
+    text-shadow: none;
+    width: 10px;
+    display: inline-block;
+	transform: rotate(90deg);
+}
+.ace-responsive-menu li ul.sub-menu li > a > .arrow:before {
+    content: "\f105" !important;
+}
+.ace-responsive-menu > li > ul.sub-menu {
+    display: none;
+    list-style: none;
+    clear: both;
+    margin: 0;
+    position: absolute;
+    z-index: 999;
+}
+.ace-responsive-menu li ul.sub-menu {
+    background: #f2993e;
+    padding-left: 0px;
+    border-radius: 0px 0px 5px 5px ;
+}
+.ace-responsive-menu li ul.sub-menu > li {
+    width: 185px;
+}
+.ace-responsive-menu li ul.sub-menu li a {
+    display: block;
+    margin: 0px 0px;
+    padding: 5px 10px 5px 10px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: normal;
+    background: none;
+}
+.ace-responsive-menu li ul.sub-menu li a:hover{
+    color:black;
+}
+ 
+.ace-responsive-menu > li > ul.sub-menu > li:not(:last-child) {
+    position: relative;
+    border-bottom: 1px solid #ea7a06;
+}
+.ace-responsive-menu > li > ul.sub-menu > li ul.sub-menu {
+    position: absolute;
+    left: 185px;
+    top: 0px;
+    display: none;
+    list-style: none;
+}
+.ace-responsive-menu > li > ul.sub-menu > li ul.sub-menu > li ul.sub-menu {
+    position: absolute;
+    left: 185px;
+    top: 0px;
+    display: none;
+    list-style: none;
+}
+.ace-responsive-menu > li > ul.sub-menu li > a > .arrow:before {
+    float: right;
+    margin-top: 1px;
+    margin-right: 0px;
+    display: inline;
+    font-size: 14px;
+    font-family: FontAwesome;
+    height: auto;
+    content: "\f104";
+    font-weight: 300;
+    text-shadow: none;
+}
+
+/* Menu Toggle Btn
+----------------------------------------*/
+.menu-toggle {
+    display: none;
+    float: left;
+    width: 100%;
+    background: #bd0000;
+}
+.menu-toggle h3 {
+    float: left;
+    color: #FFF;
+    padding: 0px 10px;
+    font-weight: 600;
+    font-size: 14px;
+}
+.menu-toggle .icon-bar {
+    display: block !important;
+    width: 18px;
+    height: 2px;
+    background-color: #F5F5F5 !important;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    border-radius: 1px;
+    -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+    margin: 3px;
+}
+.menu-toggle .icon-bar:hover {
+    background-color: #F5F5F5 !important;
+}
+.menu-toggle #menu-btn {
+    float: right;
+    background: ##bd0000;
+    border: 1px solid white;
+    padding: 3px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 7px;
+}
+.hide-menu {
+    display: none;
+}
+
+
+/* Accordion Menu Styles
+----------------------------------------*/
+
+ul[data-menu-style="accordion"] {
+    width: 250px;
+}
+ul[data-menu-style="accordion"] > li {    
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: 0px;
+    float: none !important;
+}
+ul[data-menu-style="accordion"] > li:first-child {
+    border-top: 2px solid #FD5025;
+}
+ul[data-menu-style="accordion"] li ul.sub-menu > li {
+    width: 100%;
+}
+ul[data-menu-style="accordion"] > li > a > .arrow:before {
+    float: right;
+    content: "\f105";
+}
+ul[data-menu-style="accordion"] li.menu-active > a > .arrow:before {
+    content: "\f107" !important;
+}
+ul[data-menu-style="accordion"] > li > ul.sub-menu {
+    position: static;
+}
+ul[data-menu-style="accordion"] > li > a i {
+    padding-right: 10px;
+    color: white;
+}
+ul[data-menu-style="accordion"] > li > ul.sub-menu > li ul.sub-menu {
+    position: static;
+}
+ul[data-menu-style="accordion"] > li > ul.sub-menu > li ul.sub-menu > li ul.sub-menu {
+    position: static;
+}
+ul[data-menu-style="accordion"] > li {
+    border-bottom: 1px solid #f2993e;
+}
+ul[data-menu-style="accordion"] li a:hover {
+    background: #f2993e !important;
+}
+ul[data-menu-style="accordion"] ul.sub-menu li.menu-active > a > .arrow:before {
+    content: "\f107" !important;
+}
+
+/* Vertical Menu Styles
+----------------------------------------*/
+
+ul[data-menu-style="vertical"] {
+    width: 200px;
+}
+ul[data-menu-style="vertical"] > li {
+    float: none;
+}
+ul[data-menu-style="vertical"] > li:first-child {
+    border-top: 2px solid #FD5025;
+}
+ul[data-menu-style="vertical"] li ul.sub-menu > li {
+    width: 100%;
+}
+ul[data-menu-style="vertical"] > li > a > .arrow:before {
+    float: right;
+    content: "\f105";
+}
+ul[data-menu-style="vertical"] > li.menu-active {
+position:relative;
+}
+ul[data-menu-style="vertical"] > li > ul.sub-menu {
+    position: absolute;
+    left:200px;
+    top:0px;
+    width:200px;
+}
+ul[data-menu-style="vertical"] > li > a i {
+    padding-right: 10px;
+    color: #d0d0d0;
+}
+ul[data-menu-style="vertical"]> li > ul.sub-menu > li ul.sub-menu {
+    position: absolute;
+    width:200px;
+    left: 200px;
+}
+ul[data-menu-style="vertical"] > li > ul.sub-menu > li ul.sub-menu > li ul.sub-menu {
+    position: absolute;
+    width:200px;
+    left: 200px;
+}
+ul[data-menu-style="vertical"] > li {
+    border-bottom: 1px solid #242424;
+}
+ul[data-menu-style="vertical"] li a:hover {
+    background: #272727 !important;
+}
+
+/* Responsive Menu Styles
+----------------------------------------*/
+/*Note: change the max-width asper your requirment and change the same in aceResponsiveMenu({resizeWidth: "768" }) function*/
+
+@media screen and (max-width: 768px) {
+    .menu-toggle{
+        display: block;
+    }
+    #menuHome{
+       position: relative;
+       z-index: 9;
+    }
+    #respMenu{
+        position: absolute;
+        top: 40px; 
+    }
+
+    .demo {
+		width:96%;
+		padding:2%;
+    }
+    ul[data-menu-style="vertical"] , ul[data-menu-style="accordion"],
+    ul[data-menu-style="vertical"] li ul.sub-menu {
+        width: 100% !important;
+    } 
+    .ace-responsive-menu {
+        float: left;
+        width:100%;
+        border-radius: 0px 0px 5px 5px;
+    }
+    .ace-responsive-menu > li:not(:last-child) {
+        border-bottom: 1px solid #f2993e;
+       float: none;
+    }   
+    
+    .ace-responsive-menu li a:hover {
+        background: #d21213 !important;
+    }
+    .ace-responsive-menu > li:first-child {
+        border-top: 0px solid #FD5025;
+    }    
+    .ace-responsive-menu > li > a i {
+        padding-right: 10px;
+        color: white;
+    }
+    .ace-responsive-menu > li > a > .arrow:before {
+        float: right;
+         content: " \276F";
+		font-weight: 300;
+		text-shadow: none;
+		width: 10px;
+		display: inline-block;
+		transform: rotate(90deg);
+    }
+    li.menu-active > a > .arrow:before {
+    content: " \276F";
+    font-weight: 300;
+    text-shadow: none;
+    width: 10px;
+    display: inline-block;
+	transform: rotate(90deg);
+    }
+    .ace-responsive-menu li ul.sub-menu > li {
+        width: 100%;
+    }
+    .ace-responsive-menu li ul.sub-menu li ul.sub-menu li a
+        {
+        padding-left: 30px;
+    }  
+    .ace-responsive-menu li ul.sub-menu li ul.sub-menu li ul.sub-menu li a 
+       {
+        padding-left: 50px;
+    }  
+    .ace-responsive-menu > li > ul.sub-menu {
+        position: static;
+    }
+    .ace-responsive-menu > li > ul.sub-menu > li ul.sub-menu {
+        position: static;
+    }
+    .ace-responsive-menu > li > ul.sub-menu > li ul.sub-menu > li ul.sub-menu {
+        position: static;
+    }
+    .ace-responsive-menu li ul.sub-menu li.menu-active > a > .arrow:before {
+          content: " \276F";
+    font-weight: 300;
+    text-shadow: none;
+    width: 10px;
+    display: inline-block;
+	transform: rotate(90deg);
+    }
+} 
+ 

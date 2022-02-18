@@ -1,0 +1,31 @@
+### public request
+GET http://127.0.0.1/api/demoAPI HTTP/1.1
+
+### login
+POST http://127.0.0.1/api/login HTTP/1.1
+content-type: application/json
+
+{
+    "email": "phong1@gmail.com",
+    "password": "12345678"
+}
+
+### register
+POST http://127.0.0.1/api/register HTTP/1.1
+content-type: application/json
+
+{
+    "name": "phong2",
+    "username": "phong2",
+    "email": "phong2@gmail.com",
+    "password": "12345678",
+    "password_confirmation": "12345678"
+}
+
+### logout
+POST http://127.0.0.1/api/logout   
+Authorization: Bearer 11|Nhh3MssxujDVqjyf3qhdAQ7UFY9mCne4mFzCLDWA
+
+### protectedRoute
+GET http://127.0.0.1/api/protectedRoute   
+Authorization: Bearer 18|y8cPp7UIx42AoyFEdCZRa5Huz2dqFyN3IfTSGs8s

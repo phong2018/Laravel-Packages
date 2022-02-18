@@ -1,0 +1,133 @@
+#b-hero-1 {
+  .c-background {
+    &__image {
+      background: linear-gradient(89.39deg, #000024 0.53%, #0f006b 53.96%, #0e0066 99.49%);
+    }
+    @include homedesktop { 
+      height: 557px;
+    }
+
+    @include homemobile { 
+      height: 918px;
+    }
+  }
+
+  .c-image {
+    margin-left: -250px;
+    max-width: 1000px;
+    position: relative;
+    top: 33px;
+    width: 733.32px;
+
+    @include homemobile {
+      margin-top: -10px;
+      min-height: 210px;
+      width: 209px;
+    }
+  }
+  
+  .c-picture {
+    @include homemobile {
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  .c-text:first-child {
+    color: font-color(fourth);
+    font-family: fontfamily(secondary);
+
+    @include homedesktop { 
+      /* Title */
+      @include format-sizeline(fontsize(xl), 68px);
+      @include format-leftop(0, 83px);
+      height: 136px;
+      position: absolute;
+      white-space: pre-line;
+      width: 457px;
+    }
+  
+    @include homemobile { 
+      @include format-sizeline(fontsize(xlm),61px);   
+      margin: auto;
+      padding: 45px 0 10px;
+      text-align: center;
+      width: 288px;
+    }
+  }
+  
+  .c-text:nth-child(2) {
+    color: font-color(third);
+    
+    font-weight: 300;
+
+    @include homedesktop { 
+      /* Subtitle */ 
+      @include format-sizeline(16px,18.75px);
+      @include format-leftop(0,280px);
+      height: 38px;
+      position: absolute;
+      white-space: pre-line;
+      width: 378px;
+    }
+
+    @include homemobile {   
+      @include format-sizeline(20px, 23.44px);
+      margin: auto;
+      padding: 15px 0;
+      text-align: center;
+      width: 288px;
+    }
+  }
+
+  .buttons {
+    padding: 0;
+  }
+
+  .c-button-collection {
+    &__item {
+      cursor: pointer;
+      font-weight: bold;
+      position: absolute;
+      text-align: center;
+      text-decoration: none;
+      
+      @include homemobile {
+        position: static;
+      }
+    }
+  }
+
+  @include homemobile {
+    .buttons {
+      margin-top: 20px;
+    }
+  }
+
+  .c-button-single-style {
+    &__button {
+      @include format-sizeline(16px,19px);
+      @include format-button(#0ff, #0b0058);
+      @include homedesktop {
+        @include format-leftop(0,370px);  
+      }
+      @include homemobile {  
+        margin: auto;
+        width: 161px;
+      }
+    }
+
+    &__link {
+      @include format-sizeline(16px,19px);
+      @include format-link(#0ff);
+      @include homedesktop {
+        @include format-leftop(160px,370px);  
+      }
+      @include homemobile { 
+        margin-top: 20px; 
+      }
+      list-style-type: none; 
+    }
+  }
+}

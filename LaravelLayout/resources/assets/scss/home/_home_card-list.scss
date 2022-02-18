@@ -1,0 +1,106 @@
+#b-card-list-1 {
+  padding: 50px 0 0;
+
+  @include homedesktop { 
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    width: $widthcontainer;
+  }
+
+  @include homemobile {
+    .card-item:not(:first-child)::after {
+      background-color: #ddd;
+      content: '';
+      display: block;
+      height: 1px;
+      left: 50%;
+      position: absolute;
+      top: -50px;
+      transform: translate(-50%, 0);
+      width: 187px;
+    }
+  }
+
+  .card-item {
+    @include homedesktop {
+      margin-top: 35px;
+      width: 270px;
+    }
+
+    .card-icon {
+      background: font-color(third) !important;
+    }
+    
+    .c-background {
+      align-items: center;
+      border-radius: 50%;
+      display: flex;
+      height: 200px;
+      justify-content: center;
+      margin: auto;
+      position: relative;
+      width: 200px;
+    }
+    
+    div:nth-child(2) {
+      color: font-color(primary);
+      font-family: fontfamily(secondary);
+      font-size: fontsize(l);
+      padding-top: 10px;
+    }
+    
+    div:nth-child(3) {
+      font-size: fontsize(btn);
+      height: 80px;
+      line-height: 23px;
+      margin: auto;
+      width: 270px;
+    }
+
+    li {
+      filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.5));
+      height: 36px;
+      list-style-type: none;
+      margin: auto;
+      width: 138px;
+    }
+
+    a {
+      border-radius: 4px;
+      display: block;
+      font-family: fontfamily(secondary);
+      font-weight: bold;
+      padding: 7px 0 6px;
+      text-transform: uppercase;
+    }
+
+    border-bottom-color: font-color(third);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    margin-bottom: 30px;
+    margin-top: 0;
+    padding-bottom: 70px;
+    position: relative;
+    text-align: center;
+  }
+
+  #spacer-id-4 {
+    @include transitonimg;
+    background: linear-gradient(89.39deg, #f0f 0.53%, #6455ff 99.49%);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  }
+
+  #spacer-id-6 {
+    @include transitonimg;
+    background: linear-gradient(89.39deg, #0ff 0.53%, #6455ff 99.49%);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  }
+
+  #spacer-id-8 {
+    @include transitonimg;
+    background: linear-gradient(89.39deg, #0e0066 0.53%, #6455ff 99.49%);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  } 
+}
+  

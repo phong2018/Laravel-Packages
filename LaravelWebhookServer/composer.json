@@ -1,0 +1,41 @@
+{
+    "name": "phonglg/laravelwebhookserver",
+    "description": ":package_description",
+    "license": "license",
+    "authors": [
+        {
+            "name": "author name",
+            "email": "author email",
+            "homepage": "author homepage"
+        }
+    ],
+    "homepage": "https://github.com/phonglg/laravelwebhookserver",
+    "keywords": ["Laravel", "LaravelWebhookServer"],
+    "require": {
+        "illuminate/support": "~7|~8"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~9.0",
+        "orchestra/testbench": "~5|~6"
+    },
+    "autoload": {
+        "psr-4": {
+            "Phonglg\\LaravelWebhookServer\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Phonglg\\LaravelWebhookServer\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Phonglg\\LaravelWebhookServer\\LaravelWebhookServerServiceProvider"
+            ],
+            "aliases": {
+                "LaravelWebhookServer": "Phonglg\\LaravelWebhookServer\\Facades\\LaravelWebhookServer"
+            }
+        }
+    }
+}

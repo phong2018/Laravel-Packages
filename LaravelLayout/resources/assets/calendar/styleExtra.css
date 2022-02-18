@@ -1,0 +1,56 @@
+body {
+    background: #F9F9F9 none repeat scroll 0% 0%;
+    color: #0E171C;
+    font: 300 100%/1.5em "Lato",sans-serif;
+    margin: 0px;
+}
+
+.title{
+    text-align: center;
+}
+
+.calendar-container{
+    position: relative; 
+    padding-right: 0px;
+}
+.datePicker{
+    width: 100%;
+}
+.calendar{
+    border: 1px solid #d0d0d0;
+}
+.calendar .day{
+    width: 10px;
+    height: 10px;
+} 
+.calendar .day:hover{
+    color:blue;
+    cursor: pointer;
+}
+.calendar td{
+    padding: 2px 7px 2px 0px;
+    font-size: 14px;
+}
+.calendar thead td{
+    padding: 2px 2px 2px 0px;
+}
+
+.calendar .day.today{
+    color:red;
+    background: none !important;
+}
+.calendar header{
+    padding:3px 0px 3px 0px;
+    background: #d0d0d0;
+}
+.calendar header .btn-prev,.calendar header .btn-next{
+    margin-top: 5px;
+}
+.calendar header .month
+{
+    font-weight: bold;
+}
+.calendar header .month .year{
+    font-size: 14px;
+
+}

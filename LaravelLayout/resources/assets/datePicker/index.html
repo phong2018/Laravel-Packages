@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head> 
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Datepicker - Default functionality</title>
+  
+
+  
+  <script src="jquery.js"></script>
+  <link rel="stylesheet" href="jquery-ui.css">
+	<script src="jquery-ui.js"></script>
+ 
+
+</head>
+<body>
+
+<p>Date: <input type="text" id="datepicker" value="choose date1" /></p>
+<p>Date: <input type="text" id="datepicker2" value="choose date2" /></p>
+<style>
+
+#datepicker + .ui-datepicker-trigger {
+    position:absolute; 
+    margin-left:-18px;
+    margin-top:2px;
+}
+
+#datepicker2+ .ui-datepicker-trigger {
+    position:absolute; 
+    margin-left:-18px;
+    margin-top:2px;
+}
+</style>
+<script>
+$(function() {
+  $("#datepicker").datepicker({
+    //showOn: both - datepicker will come clicking the input box as well as the calendar icon
+    //showOn: button - datepicker will come only clicking the calendar icon
+    showOn: 'button',
+    //you can use your local path also eg. buttonImage: 'images/x_office_calendar.png'
+    buttonImage: 'http://jqueryui.com/resources/demos/datepicker/images/calendar.gif',
+    buttonImageOnly: true,
+    changeMonth: true,
+    changeYear: true,
+    showAnim: 'slideDown',
+    duration: 'fast',
+    dateFormat: 'dd-mm-yy'
+  });
+  $("#datepicker2").datepicker({
+    //showOn: both - datepicker will come clicking the input box as well as the calendar icon
+    //showOn: button - datepicker will come only clicking the calendar icon
+    showOn: 'both',
+    //you can use your local path also eg. buttonImage: 'images/x_office_calendar.png'
+    buttonImage: 'http://jqueryui.com/resources/demos/datepicker/images/calendar.gif',
+    buttonImageOnly: true,
+    changeMonth: true,
+    changeYear: true,
+    showAnim: 'slideDown',
+    duration: 'fast',
+    dateFormat: 'dd-mm-yy'
+  });
+ 
+  $(document).ready(function(){ 
+    document.getElementById("datepicker2").focus();
+  });
+
+
+
+  // $('#datepicker').datepicker('setDate',new Date());
+});
+
+</script>
+
+</body>
+</html>

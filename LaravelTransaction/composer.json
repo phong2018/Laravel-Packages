@@ -1,0 +1,41 @@
+{
+    "name": "phonglg/laraveltransaction",
+    "description": ":package_description",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Author Name",
+            "email": "author@email.com",
+            "homepage": "http://author.com"
+        }
+    ],
+    "homepage": "https://github.com/phonglg/laraveltransaction",
+    "keywords": ["Laravel", "LaravelTransaction"],
+    "require": {
+        "illuminate/support": "~7|~8"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~9.0",
+        "orchestra/testbench": "~5|~6"
+    },
+    "autoload": {
+        "psr-4": {
+            "Phonglg\\LaravelTransaction\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Phonglg\\LaravelTransaction\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Phonglg\\LaravelTransaction\\LaravelTransactionServiceProvider"
+            ],
+            "aliases": {
+                "LaravelTransaction": "Phonglg\\LaravelTransaction\\Facades\\LaravelTransaction"
+            }
+        }
+    }
+}
